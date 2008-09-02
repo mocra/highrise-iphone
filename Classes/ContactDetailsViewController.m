@@ -80,6 +80,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	self.navigationItem.title = person.name;
 }
 
 
