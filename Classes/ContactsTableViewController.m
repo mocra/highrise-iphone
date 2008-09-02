@@ -40,10 +40,11 @@
 	return UITableViewCellAccessoryDisclosureIndicator;
 }
 
-/*
- - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
- }
- */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	Person *person = [contacts objectAtIndex:indexPath.row];
+	NSLog(@"%s %@", _cmd, person);
+}
+
 /*
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
  
