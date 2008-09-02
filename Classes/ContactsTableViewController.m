@@ -37,11 +37,11 @@
 	return cell;
 }
 
-// Asks the delegate for the type of standard accessory view to use as a disclosure control for the specified row. This method is optional.
- - (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
- {
-	 return UITableViewCellAccessoryDisclosureIndicator;
- }
+// Puts > on each tableView item
+- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+	return UITableViewCellAccessoryDisclosureIndicator;
+}
 
 /*
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
