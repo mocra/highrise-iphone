@@ -20,18 +20,15 @@
 	return [contacts count];
 }
 
+#define MyIdentifier @"MyIdentifier"
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	static NSString *MyIdentifier = @"MyIdentifier";
-	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectMake(0,0,0,0) reuseIdentifier:MyIdentifier] autorelease];
 	}
 	// Configure the cell
 	Person *person = [contacts objectAtIndex:indexPath.row];
-	NSLog(@"Contact: %@", person);
 	
 	cell.text = person.name;
 	return cell;
