@@ -20,12 +20,12 @@
 	return [contacts count];
 }
 
-#define MyIdentifier @"MyIdentifier"
+#define ContactsTableView @"ContactsTableView"
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ContactsTableView];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectMake(0,0,0,0) reuseIdentifier:MyIdentifier] autorelease];
+		cell = [[[UITableViewCell alloc] initWithFrame:CGRectMake(0,0,0,0) reuseIdentifier:ContactsTableView] autorelease];
 	}
 	// Configure the cell
 	Person *person = [contacts objectAtIndex:indexPath.row];
@@ -43,6 +43,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	Person *person = [contacts objectAtIndex:indexPath.row];
 	NSLog(@"%s %@", _cmd, person);
+	ContactDetailsViewController *contactDetailsViewController = [[ContactDetailsViewController alloc] initWithPerson:person];
+	[[self navigationController] pushViewController:contactDetailsViewController animated:YES];
 }
 
 /*
