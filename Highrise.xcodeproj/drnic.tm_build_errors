@@ -1,0 +1,5 @@
+/Users/drnic/Documents/objc/iphone/Highrise/Classes/ContactsTableViewController.m|73|error: ‘Person’ undeclared (first use in this function)
+/Users/drnic/Documents/objc/iphone/Highrise/Classes/ContactsTableViewController.m|73|error: (Each undeclared identifier is reported only once
+/Users/drnic/Documents/objc/iphone/Highrise/Classes/ContactsTableViewController.m|73|error: for each function it appears in.)
+/Users/drnic/Documents/objc/iphone/Highrise/Classes/Person.m|18|warning: local declaration of ‘name’ hides instance variable
+/Users/drnic/Documents/objc/iphone/Highrise/Classes/Person.m|21|warning: control reaches end of non-void function
