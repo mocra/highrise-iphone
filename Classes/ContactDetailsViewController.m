@@ -15,17 +15,11 @@
 - (id)initWithPerson:(Person *)aPerson {
     if([super init]) {
 		person = aPerson;
+		[self initWithStyle:UITableViewStyleGrouped];
 		return self;
     }
 	return nil;
 }
-
-- (id)initWithStyle:(UITableViewStyle)style {
-	if (self = [super initWithStyle:style]) {
-	}
-	return self;
-}
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
